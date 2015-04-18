@@ -14,7 +14,7 @@ public class BaseDaoImpl <T> implements BaseDao<T>{
 
 	@Override
 	public Serializable save(T o) {
-		// TODO Auto-generated method stub
+		System.err.println("gfgd");
 		return null;
 	}
 
