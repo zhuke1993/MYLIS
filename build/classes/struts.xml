@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    <struts>
+    	<!-- 开发模式 立即生效 -->
+    	<constant name="struts.configuration.xml.reload" value="true"></constant>
+    	<!-- 详细错误信息 -->
+    	<constant name="struts.devMode" value="true"></constant>
+ 		<!-- 简单主题 -->
+     	<constant name="struts.ui.theme" value="simple"></constant>   	
+    	<!-- 把扩展名配置为action 也可以配置其他常量如HTML 配置为action方便Spring管理-->
+		<constant name="struts.action.extension" value="action"></constant>
+    	<!-- 指定国际化编码指定的字符集 -->
+    	<constant name="struts.i18n.encoding" value="UTF-8"></constant>	
+    	<!-- 整合Spring -->
+    	<!-- 与Spring 集成时  由Spring 负责Action类的创建  不用Struts创建维护 了  用Spring 的对象工厂 替换掉Struts2 的对象工厂  -->
+	    <constant name="struts.objectFactory" value="spring"></constant>
+	 
+	  	<!-- Spring Struts2整合测试 -->
+	   	<package name="test" namespace="/test" extends="struts-default">
+    		<!-- class ：Actionbean 的名称 Struts会去Spring中获取 -->
+ 	   		<action name="test" class="TestAction">
+ 	   			<result name="success">/WEB-INF/test.jsp</result>		
+    		</action>
+    	</package> 
+    
+    	<!-- Struts 单独测试 -->
+<!--     	<package name="pn" namespace="/test" extends="struts-default">
+    		<action name="testaction" class="com.lis.base.test.TestAction">
+    			<result name="success">/WEB-INF/test.jsp</result>
+    		</action>
+    	</package> -->
+    	
+    </struts>
