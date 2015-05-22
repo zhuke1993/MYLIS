@@ -8,13 +8,14 @@ import com.lis.base.entitys.PageBean;
 
 public interface BaseDao <T> {
 	public Serializable save(T o);
+	
 	public void delete(T o);
 
 	public void update(T o);
 	
 	public void saveOrUpdate(T o);
 	
-
+	
 	public void merge(T o);
 
 	public List<T> find(String hql);
