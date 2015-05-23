@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasFloor" table="fas_floor" catalog="mylis">
+        <composite-id name="id" class="com.lis.fas.entity.FasFloorId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="floorTypename" type="string">
+                <column name="floor_typename" length="20" />
+            </key-property>
+            <key-property name="floorName" type="string">
+                <column name="floor_name" length="20" />
+            </key-property>
+            <key-property name="floorCompany" type="string">
+                <column name="floor_company" length="20" />
+            </key-property>
+            <key-property name="floorHiretype" type="string">
+                <column name="floor_hiretype" length="200" />
+            </key-property>
+            <key-property name="floorPrice" type="big_decimal">
+                <column name="floor_price" precision="9" />
+            </key-property>
+            <key-property name="floorApply" type="big_decimal">
+                <column name="floor_apply" precision="9" />
+            </key-property>
+            <key-property name="floorApplyEmpid" type="java.lang.Integer">
+                <column name="floor_apply_empid" />
+            </key-property>
+            <key-property name="floorBegintime" type="date">
+                <column name="floor_begintime" length="10" />
+            </key-property>
+            <key-property name="floorEndtime" type="date">
+                <column name="floor_endtime" length="10" />
+            </key-property>
+            <key-property name="empId" type="int">
+                <column name="emp_id" />
+            </key-property>
+            <key-property name="updateDate" type="date">
+                <column name="update_date" length="10" />
+            </key-property>
+            <key-property name="createDate" type="date">
+                <column name="create_date" length="10" />
+            </key-property>
+            <key-property name="delStatus" type="char">
+                <column name="del_status" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

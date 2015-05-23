@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasBankinfo" table="fas_bankinfo" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="bankinfoName" type="string">
+            <column name="bankinfo_name" length="50" not-null="true">
+                <comment>&#210;&#248;&#208;&#208;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="bankinfoNumber" type="string">
+            <column name="bankinfo_number" length="50" not-null="true">
+                <comment>&#210;&#248;&#208;&#208;&#213;&#203;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10" not-null="true">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+        <set name="fasAccountinfos" table="fas_accountinfo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bankInfo_id" not-null="true">
+                    <comment>
+                    &#210;&#248;&#208;&#208;&#187;&#249;&#177;&#190;&#208;&#197;&#207;&#162;&#163;&#172;&#205;&#226;&#188;&#252;--&#210;&#248;&#208;&#208;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.lis.fas.entity.FasAccountinfo" />
+        </set>
+        <set name="fasCheckinfos" table="fas_checkinfo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bankinfo_id" not-null="true">
+                    <comment>&#210;&#248;&#208;&#208;&#195;&#251;&#179;&#198;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.lis.fas.entity.FasCheckinfo" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasCheckinfo" table="fas_checkinfo" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fasBankinfo" class="com.lis.fas.entity.FasBankinfo" fetch="select">
+            <column name="bankinfo_id" not-null="true">
+                <comment>&#210;&#248;&#208;&#208;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </many-to-one>
+        <property name="ciDate" type="date">
+            <column name="ci_date" length="10" not-null="true">
+                <comment>&#185;&#186;&#214;&#195;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="ciIncept" type="string">
+            <column name="ci_incept" length="50" not-null="true">
+                <comment>&#214;&#167;&#198;&#177;&#198;&#240;&#202;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="ciStop" type="string">
+            <column name="ci_stop" length="50" not-null="true">
+                <comment>&#214;&#167;&#198;&#177;&#214;&#213;&#214;&#185;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="ciStatus" type="java.lang.Character">
+            <column name="ci_status" length="1">
+                <comment>&#214;&#167;&#198;&#177;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="ciHxstatus" type="date">
+            <column name="ci_hxstatus" length="10">
+                <comment>&#186;&#203;&#207;&#250;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10" not-null="true">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

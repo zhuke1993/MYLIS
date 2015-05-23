@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasCopeinfo" table="fas_copeinfo" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="copeinfoOi" type="int">
+            <column name="copeinfo_oi" not-null="true">
+                <comment>&#191;&#205;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="copeinfoGt" type="string">
+            <column name="copeinfo_gt" length="20" not-null="true">
+                <comment>&#184;&#182;&#191;&#238;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="copeinfoGm" type="big_decimal">
+            <column name="copeinfo_gm" precision="9" not-null="true">
+                <comment>&#184;&#182;&#191;&#238;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="copeinfoOa" type="big_decimal">
+            <column name="copeinfo_oa" precision="9">
+                <comment>&#213;&#251;&#181;&#165;&#213;&#219;&#191;&#219;</comment>
+            </column>
+        </property>
+        <property name="copeinfoSm" type="big_decimal">
+            <column name="copeinfo_sm" precision="9" not-null="true">
+                <comment>&#202;&#181;&#184;&#182;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="copeinfoFm" type="char">
+            <column name="copeinfo_fm" length="1" not-null="true">
+                <comment>&#189;&#225;&#203;&#227;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="copeinfoAm" type="int">
+            <column name="copeinfo_am" not-null="true">
+                <comment>&#201;&#243;&#186;&#203;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="copeinfoRemark" type="string">
+            <column name="copeinfo_remark" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10" not-null="true">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

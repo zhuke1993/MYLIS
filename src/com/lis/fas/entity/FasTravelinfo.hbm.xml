@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasTravelinfo" table="fas_travelinfo" catalog="mylis">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="departmentId" type="int">
+            <column name="department_id" not-null="true" />
+        </property>
+        <property name="trivalTime" type="date">
+            <column name="trival_time" length="10" not-null="true" />
+        </property>
+        <property name="trivalEm" type="big_decimal">
+            <column name="trival_em" precision="9" />
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true" />
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10" />
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10" />
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>0&#206;&#180;&#201;&#190;&#179;&#253; 1&#210;&#209;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

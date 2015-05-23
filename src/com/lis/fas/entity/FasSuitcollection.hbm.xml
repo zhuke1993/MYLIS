@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasSuitcollection" table="fas_suitcollection" catalog="mylis">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fasSubjectinfo" class="com.lis.fas.entity.FasSubjectinfo" fetch="select">
+            <column name="subject_id" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="orderId" type="int">
+            <column name="order_id" not-null="true">
+                <comment>&#182;&#169;&#181;&#165;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="suitciGt" type="string">
+            <column name="suitci_gt" length="10" not-null="true">
+                <comment>&#202;&#213;&#191;&#238;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="suitciGm" type="big_decimal">
+            <column name="suitci_gm" precision="9" not-null="true">
+                <comment>&#202;&#213;&#191;&#238;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="suitciOa" type="big_decimal">
+            <column name="suitci_oa" precision="9">
+                <comment>&#213;&#251;&#181;&#165;&#213;&#219;&#191;&#219;</comment>
+            </column>
+        </property>
+        <property name="suitciSm" type="big_decimal">
+            <column name="suitci_sm" precision="9" not-null="true">
+                <comment>&#202;&#181;&#202;&#213;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="suitciFm" type="char">
+            <column name="suitci_fm" length="1" not-null="true">
+                <comment>&#189;&#225;&#203;&#227;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="suitciMm" type="int">
+            <column name="suitci_mm" not-null="true">
+                <comment>&#214;&#198;&#181;&#165;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="suitciAm" type="int">
+            <column name="suitci_am" not-null="true">
+                <comment>&#201;&#243;&#186;&#203;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="suitciRemark" type="string">
+            <column name="suitci_remark" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

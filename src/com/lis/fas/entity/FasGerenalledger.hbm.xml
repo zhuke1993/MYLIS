@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasGerenalledger" table="fas_gerenalledger" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fasSubjectinfo" class="com.lis.fas.entity.FasSubjectinfo" fetch="select">
+            <column name="subject_id" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="subjectName" type="string">
+            <column name="subject_name" length="50" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="generalBd" type="string">
+            <column name="general_bd" length="200" not-null="true">
+                <comment>&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="generalBb" type="big_decimal">
+            <column name="general_bb" precision="9" not-null="true">
+                <comment>&#198;&#218;&#179;&#245;&#211;&#224;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalCa" type="big_decimal">
+            <column name="general_ca" precision="9" not-null="true">
+                <comment>&#177;&#190;&#198;&#218;&#211;&#166;&#202;&#213;&#200;&#171;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalCr" type="big_decimal">
+            <column name="general_cr" precision="9" not-null="true">
+                <comment>&#177;&#190;&#198;&#218;&#211;&#166;&#184;&#182;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalYa" type="big_decimal">
+            <column name="general_ya" precision="9" not-null="true">
+                <comment>&#177;&#190;&#196;&#234;&#211;&#166;&#184;&#182;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalYr" type="big_decimal">
+            <column name="general_yr" precision="9" not-null="true">
+                <comment>&#177;&#190;&#196;&#234;&#211;&#166;&#202;&#213;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalEb" type="big_decimal">
+            <column name="general_eb" precision="9" not-null="true">
+                <comment>&#198;&#218;&#196;&#169;&#211;&#224;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="generalSummary" type="string">
+            <column name="general_summary" length="200">
+                <comment>&#213;&#170;&#210;&#170;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

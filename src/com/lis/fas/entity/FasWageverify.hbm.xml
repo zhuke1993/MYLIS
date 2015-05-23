@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasWageverify" table="fas_wageverify" catalog="mylis">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fasBiscwage" class="com.lis.fas.entity.FasBiscwage" fetch="select">
+            <column name="basc_id" not-null="true">
+                <comment>&#187;&#249;&#177;&#190;&#185;&#164;&#215;&#202;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="employeeId" type="int">
+            <column name="employee_id" not-null="true">
+                <comment>&#212;&#177;&#185;&#164;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="superfluityWage" type="big_decimal">
+            <column name="superfluity_wage" precision="9">
+                <comment>&#182;&#238;&#205;&#226;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+        <property name="recoupWage" type="big_decimal">
+            <column name="recoup_wage" precision="9">
+                <comment>&#191;&#219;&#179;&#253;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+        <property name="wageRevenue" type="big_decimal">
+            <column name="wage_revenue" precision="9" not-null="true">
+                <comment>&#189;&#201;&#196;&#201;&#203;&#176;&#202;&#213;</comment>
+            </column>
+        </property>
+        <property name="deservelyWage" type="big_decimal">
+            <column name="deservely_wage" precision="9" not-null="true">
+                <comment>&#211;&#166;&#181;&#195;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+        <property name="wageRewark" type="string">
+            <column name="wage_rewark" length="200">
+                <comment>&#177;&#184;&#215;&#162;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+        <property name="bascWage" type="big_decimal">
+            <column name="basc_wage" precision="9" not-null="true">
+                <comment>&#187;&#249;&#177;&#190;&#185;&#164;&#215;&#202;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

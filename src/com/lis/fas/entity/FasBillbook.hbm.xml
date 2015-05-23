@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasBillbook" table="fas_billbook" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fasSubjectinfo" class="com.lis.fas.entity.FasSubjectinfo" fetch="select">
+            <column name="subject_id" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="billbookDate" type="date">
+            <column name="billbook_date" length="10" not-null="true">
+                <comment>&#188;&#199;&#213;&#203;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="billbookNumber" type="string">
+            <column name="billbook_number" length="50" not-null="true">
+                <comment>&#198;&#190;&#214;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="billbookDm" type="big_decimal">
+            <column name="billbook_dm" precision="9" not-null="true">
+                <comment>&#189;&#232;&#183;&#189;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="billbookLm" type="big_decimal">
+            <column name="billbook_lm" precision="9" not-null="true">
+                <comment>&#180;&#251;&#183;&#189;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="billbookSub" type="char">
+            <column name="billbook_sub" length="1" not-null="true">
+                <comment>&#182;&#212;&#183;&#189;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="billbookHp" type="int">
+            <column name="billbook_hp" not-null="true">
+                <comment>&#190;&#173;&#202;&#214;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="billbookFormat" type="string">
+            <column name="billbook_format" length="50" not-null="true">
+                <comment>&#179;&#246;&#196;&#201;&#208;&#206;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="billbookSum" type="string">
+            <column name="billbook_sum" length="50">
+                <comment>&#213;&#170;&#210;&#170;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasReceiptinfo" table="fas_receiptinfo" catalog="mylis">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="receiptType" type="string">
+            <column name="receipt_type" length="10" not-null="true">
+                <comment>&#191;&#170;&#198;&#177;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="receiptMode" type="string">
+            <column name="receipt_mode" length="10" not-null="true">
+                <comment>&#191;&#170;&#198;&#177;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="clientId" type="int">
+            <column name="client_id" not-null="true">
+                <comment>&#191;&#205;&#187;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="receiptMoney" type="big_decimal">
+            <column name="receipt_money" precision="9" not-null="true">
+                <comment>&#191;&#170;&#198;&#177;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="receiptRemark" type="string">
+            <column name="receipt_remark" length="200" not-null="true">
+                <comment>&#177;&#184;&#215;&#162;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true">
+                <comment>&#197;&#208;&#182;&#207;&#194;&#223;&#188;&#173;&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

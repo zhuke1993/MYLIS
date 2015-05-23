@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.fas.entity.FasEvectioninfo" table="fas_evectioninfo" catalog="mylis">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="employeesId" type="int">
+            <column name="employees_id" not-null="true" />
+        </property>
+        <property name="evectionTime" type="date">
+            <column name="evection_time" length="10" not-null="true" />
+        </property>
+        <property name="evectionPlace" type="string">
+            <column name="evection_place" length="50" not-null="true" />
+        </property>
+        <property name="evectionMoney" type="big_decimal">
+            <column name="evection_money" precision="9" />
+        </property>
+        <property name="evectionRemark" type="string">
+            <column name="evection_remark" length="20" />
+        </property>
+        <property name="evectionPm" type="big_decimal">
+            <column name="evection_pm" precision="9" />
+        </property>
+        <property name="empId" type="int">
+            <column name="emp_id" not-null="true" />
+        </property>
+        <property name="updateDate" type="date">
+            <column name="update_date" length="10" />
+        </property>
+        <property name="createDate" type="date">
+            <column name="create_date" length="10" />
+        </property>
+        <property name="delStatus" type="char">
+            <column name="del_status" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
