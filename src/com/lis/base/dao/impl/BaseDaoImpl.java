@@ -3,6 +3,9 @@ package com.lis.base.dao.impl;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,7 +17,7 @@ import com.lis.base.entitys.PageBean;
 @Repository("BaseDao")
 @SuppressWarnings("all")
 public class BaseDaoImpl<T> implements BaseDao<T> {
-
+	@Resource(name="sessionFactory")
 	private SessionFactory sessionFactory;
 
 	public SessionFactory getSessionFactory() {
@@ -41,7 +44,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	@Override
 	public void update(T o) {
-		this.getCurrentSession().delete(o);
+		this.getCurrentSession().update(o);
 	}
 
 	@Override
@@ -65,8 +68,10 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	public List<T> find(String hql, Object[] param) {
 		Query query = this.getCurrentSession().createQuery(hql);
 		if (param != null && param.length > 0) {
-			for (int i = 0; i < param.length; i++) {
-				query.setParameter(i, param[i]);
+			for (int i = 0; i <param.length; i++) {
+				//
+				query.setParameter(i+1, param[i]);
+				System.out.println("ppp"+i+param[i]);
 			}
 		}
 		return query.list();
@@ -79,9 +84,19 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		if (param != null && param.size() > 0) {
 			for (int i = 0; i < param.size(); i++) {
 				query.setParameter(i, param.get(i));
+				
 			}
 		}
 		return query.list();
+	}
+	
+	/* (non-Javadoc)
+	 * 带页面大小和每页的起始数据列
+	 */
+	@Override
+	public List<T> getFenYeList(int size, int count,String hql) {
+		Query query = this.getCurrentSession().createQuery(hql);
+		return query.setFirstResult(count).setMaxResults(size).list();
 	}
 
 	// HQL带参数对象数组 分页查询多条数据
@@ -142,8 +157,8 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	}
 	//不带参数的查询单个结果得到条数
 	@Override
-	public int count(String hql) {
-		return (int) getCurrentSession().createQuery(hql).uniqueResult();
+	public Number count(String hql) {
+		return (Number) getCurrentSession().createQuery(hql).uniqueResult();
 	}
 	//带参数的查询单个结果得到条数
 	@Override
