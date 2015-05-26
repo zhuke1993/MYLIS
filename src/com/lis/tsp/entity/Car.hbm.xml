@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.tsp.entity.Car" table="car">
+    	<id name="id" column="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="carNumber"></property>
+    	<property name="carChePai"></property>
+    	<property name="carState"></property>
+    	<property name="carLoad"></property>
+    	<property name="carType"></property>
+    	<property name="carBuyingTime" type="date"></property>
+    	<property name="carPlace"></property>
+    	<property name="carBuyingMoney"></property>
+    	<property name="carCreatTime" type="date"></property>
+    	<property name="carDescription"></property>
+    </class>
+</hibernate-mapping>

@@ -9,7 +9,7 @@
 		<!-- SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
-      	<property name="hbm2ddl.auto">create</property>
+      	<property name="hbm2ddl.auto">update</property>
       	
 <!--       Hibernate Test
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
@@ -30,5 +30,9 @@
       	
 		<mapping resource="com/lis/base/test/UserXmlTest.hbm.xml"></mapping>
       	
+      	
+      	
+      	<!-- tsp模板的配置 -->
+      	<mapping resource="com/lis/tsp/entity/Car.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

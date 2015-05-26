@@ -1,0 +1,130 @@
+/*
+ * @author: Allen Kung
+ * @date: 16/04/2009
+ * CSS for xcot.com
+ */
+
+body {
+	
+	color:#999;
+	font-size:12px; 
+	font-family:"Lucida Grande",Arial,sans-serif;
+	line-height:1.5em;
+}
+
+* {
+	height:auto;
+	margin:0;
+	padding:0;
+}
+
+a {
+	color:#ff7b00;text-decoration:none;
+	bblr:expression(this.onFocus=this.blur()); 
+	outline:none;
+}
+a:hover {text-decoration:underline;}
+
+i {
+	font-size: 11px;
+	color: red;
+}
+
+img {border:none;}
+li {list-style:none;}
+
+.hide {display:none;}
+
+.clear {
+	clear: both;
+    height:1px;
+    margin-top:-1px; 
+    overflow:hidden;
+}
+
+.link_style_1 {
+	background:url(../img/link_style_1.gif) no-repeat 0 2px;
+	padding-left: 15px;
+}
+
+.list_style_1 li a {
+	background:url(../img/list_style_1.gif) no-repeat 0 6px;
+	line-height:2em;
+	padding-left:15px;
+}
+
+#wrap {
+	margin:auto;
+}
+
+/* @group main_nav */
+#main_nav 
+{
+	background: url(../img/nav_bg.png) top left;
+}
+#main_nav ul {
+	font-size: 13px;
+	list-style: none;
+}
+
+#main_nav {
+	background: url(../img/nav_bg.png) repeat-x top left;
+	height: 50px;
+	overflow: visible;
+	padding-left: 20px;
+}
+
+#main_nav li 
+{
+	float: left;
+	position: relative;
+	z-index: 5;
+}
+
+#main_nav li a 
+{
+	color: #fff;
+	display: block;
+	width: 91px;
+	height: 35px;
+	text-decoration: none;
+	line-height: 35px;
+	text-align: center;
+	margin-top: 2px;
+}
+
+#main_nav li ul li a {
+	font-size: 12px;
+	width: 89px;
+	height: 25px;
+	line-height: 25px;
+	margin: 0px;
+}
+
+#main_nav li ul li a:hover, #main_nav li.focus ul li a:hover {
+	background:#547EA3;
+}
+
+#main_nav li.focus a, #main_nav li a:hover {
+	background: url(../img/nav_over.png) repeat-x top left;
+}
+
+#main_nav li.focus ul li a {
+	background: none;
+}
+
+#main_nav li ul {
+	position: absolute;
+	top: 36px;
+	left: 0px;
+	background: #223959;
+	border-color: #223959;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+	display: none;
+}
+
+#main_nav li ul li{
+	float: none;
+}
+/* @end */

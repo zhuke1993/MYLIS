@@ -40,7 +40,7 @@ public interface BaseDao <T> {
 	public T get(String hql, List<Object> param);
 
 
-	public int count(String hql);
+	public Number count(String hql);
 
 
 	public int count(String hql, Object[] param);
@@ -59,4 +59,6 @@ public interface BaseDao <T> {
 	//public Integer executeSql(String sql); 为啥用Integer
 	
 	public int executeSql(String sql);
+	//带页面大小和每页的起始数据列
+	public List<T> getFenYeList(int size,int count,String hql);
 }

@@ -18,13 +18,17 @@
 	    <constant name="struts.objectFactory" value="spring"></constant>
 	 
 	  	<!-- Spring Struts2整合测试 -->
-	   	<package name="test" namespace="/test" extends="struts-default">
-    		<!-- class ：Actionbean 的名称 Struts会去Spring中获取 -->
+	   <!-- 	<package name="test" namespace="/test" extends="struts-default">
+    		class ：Actionbean 的名称 Struts会去Spring中获取
  	   		<action name="test" class="TestAction">
  	   			<result name="success">/WEB-INF/test.jsp</result>		
     		</action>
+    	</package> --> 
+    	<package name="mytest" namespace="/mytest" extends="struts-default">
+ 	   		<action name="mytest" class="myTestSS2">
+ 	   			<result name="success">/WEB-INF/test.jsp</result>		
+    		</action>
     	</package> 
-    
     	<!-- Struts 单独测试 -->
 <!--     	<package name="pn" namespace="/test" extends="struts-default">
     		<action name="testaction" class="com.lis.base.test.TestAction">
@@ -32,4 +36,16 @@
     		</action>
     	</package> -->
     	
+    	<!-- tsp 模块的action配置start -->
+    	<package name="carAction" namespace="/TSP" extends="struts-default">
+    		<action name="CarAction_*" class="carAction" method="{1}">
+    			<result name="list">/WEB-INF/page/TSP/Car.jsp</result>
+    			<result name="addUI">/WEB-INF/page/TSP/CarAdd.jsp</result>
+    			<result name="tolist" type="redirectAction">CarAction_list</result>
+    			<result name="editUI">/WEB-INF/page/TSP/CarEdit.jsp</result>
+    			<result name="editTypeUI">/WEB-INF/page/TSP/CarEditType.jsp</result>
+    			<result name="detail">/WEB-INF/page/TSP/CarDetails.jsp</result>
+    		</action>
+    	</package> 
+    	<!-- tsp 模块的action配置end -->
     </struts>
