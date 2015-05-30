@@ -34,5 +34,8 @@
       	
       	<!-- tsp模板的配置 -->
       	<mapping resource="com/lis/tsp/entity/Car.hbm.xml"/>
+      	<mapping resource="com/lis/tsp/entity/CarPreserve.hbm.xml"/>
+      	<mapping resource="com/lis/tsp/entity/CarRepair.hbm.xml"/>
+      	<mapping resource="com/lis/tsp/entity/Line.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

@@ -15,6 +15,7 @@ public class MyTestSS2 extends ActionSupport{
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("mytest");
+		
 		return "success";
 	}
 	

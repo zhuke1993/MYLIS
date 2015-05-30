@@ -197,8 +197,8 @@ public class CarAction extends ActionSupport implements ModelDriven<Car>{
 		}
 		else{
 			//---查询时，需要这些数据来进行查询。组建好hql语句把他放在request中
-			if(car.getCarNumber()!=null&&!car.getCarNumber().equals("")){
-				hql=hql+"and c.carNumber='"+car.getCarNumber()+"'";
+			if(car.getId()!=null&&!car.getId().equals("")){
+				hql=hql+"and c.id='"+car.getId()+"'";
 			}
 			
 			if(car.getCarChePai()!=null&&!car.getCarChePai().equals("")){

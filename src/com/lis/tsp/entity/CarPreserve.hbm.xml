@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.tsp.entity.CarPreserve" table="CarPreserve">
+    	<id name="id" column="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="preserveNumber"></property>
+    	<property name="preserverPlace"></property>
+    	<property name="preserveTime" type="date"></property>
+    	<property name="updateTime" type="date"></property>
+    	<property name="preserveCreateTime" type="date"></property>
+    	<property name="preserveMoney"></property>
+    	<property name="preserveDescription"></property>
+    	<property name="disposeName"></property>
+    	<property name="preservePeriod"></property>
+    	<property name="empName"></property>
+    	<property name="del_status"></property>
+ 		<many-to-one name="car" class="com.lis.tsp.entity.Car" column="CarId"></many-to-one>
+    </class>
+</hibernate-mapping>

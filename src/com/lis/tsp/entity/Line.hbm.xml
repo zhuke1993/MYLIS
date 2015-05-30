@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.tsp.entity.Line" table="line">
+    	<id name="id" column="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="lineNumber"></property>
+    	<property name="startCity"></property>
+    	<property name="endCity"></property>
+    	<property name="startDescriptionPlace"></property>
+    	<property name="endDescriptionPlace"></property>
+    	<property name="remark"></property>
+    	<property name="telPhone"></property>
+    	<property name="del_status"></property>
+    	
+    </class>
+</hibernate-mapping>

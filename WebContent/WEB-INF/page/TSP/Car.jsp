@@ -136,7 +136,7 @@
 		            </td>
 		            <td >
 			           <!--  <input type="text" class="inputText" name="txtCarId"/> -->
-			           <s:textfield name="carNumber" cssClass="inputText"></s:textfield>
+			           <s:textfield name="id" cssClass="inputText"></s:textfield>
 		            </td>
 		            <td class="tabModelTip">
   			            车牌:
@@ -268,7 +268,7 @@
 
     			    <td>
     				    <%-- <a href="#" onclick="Show()">${ carNumber}</a> --%>
-    				    <s:a action="CarAction_detail?id=%{id}">${ carNumber}</s:a>
+    				    <s:a action="CarAction_detail?id=%{id}">${ id}</s:a>
     			    </td>
     			    <td>
     				    ${ carChePai}
@@ -321,7 +321,7 @@
                               		<s:a action="CarAction_list?pageBean.page=%{#pageBean.totalPage}" cssClass="btnPage">最后一页</s:a>
                               	</s:else>
                               	&nbsp; 转到第
-                              	<s:form action="CarAction_list" cssStyle="display:block;float:right;margin-top:-2px">
+                              	<s:form action="CarAction_list" cssStyle="display:block;float:right;margin-top:-19px">
                               	<%-- <input type="text" class="inputPage" />页 <s:a 
                                         id="btnGo" cssClass="btnPage">GO</s:a> --%>
                                         <s:textfield name="pageBean.page" cssClass="inputPage" ></s:textfield>
@@ -332,7 +332,8 @@
                               <s:else>
                               	
                               	<s:if test="%{#pageBean.page==1}">
-                              		
+                              		<s:a action="CarAction_query?pageBean.page=%{#pageBean.page+1}&cahxuanid=1" cssClass="btnPage">下一页</s:a>
+                              		<s:a action="CarAction_query?pageBean.page=%{#pageBean.totalPage}&cahxuanid=1" cssClass="btnPage">最后一页</s:a>
                               	</s:if>
                               	<s:else>
                               		<s:a action="CarAction_query?pageBean.page=1&cahxuanid=1" cssClass="btnPage"> 首页</s:a>
@@ -346,7 +347,7 @@
                               		<s:a action="CarAction_query?pageBean.page=%{#pageBean.totalPage}&cahxuanid=1" cssClass="btnPage">最后一页</s:a>
                               	</s:else>
                               	&nbsp; 转到第
-                              	<s:form action="CarAction_query" cssStyle="display:block;float:right;margin-top:-2px">
+                              	<s:form action="CarAction_query" cssStyle="display:block;float:right;margin-top:-19px">
                               	<%-- <input type="text" class="inputPage" />页 <s:a 
                                         id="btnGo" cssClass="btnPage">GO</s:a> --%>
                                         <s:textfield name="pageBean.page" cssClass="inputPage" ></s:textfield>

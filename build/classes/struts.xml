@@ -46,6 +46,30 @@
     			<result name="editTypeUI">/WEB-INF/page/TSP/CarEditType.jsp</result>
     			<result name="detail">/WEB-INF/page/TSP/CarDetails.jsp</result>
     		</action>
+    		<!-- 汽车保修action -->
+    		<action name="CarPreserveAction_*" class="carPreserveAction" method="{1}">
+    			<result name="saveUI">/WEB-INF/page/TSP/CarPreserveSave.jsp</result>
+    			<result name="list">/WEB-INF/page/TSP/CarPreserveList.jsp</result>
+    			<result name="query">/WEB-INF/page/TSP/CarPreserveList.jsp</result>
+    			<result name="detail">/WEB-INF/page/TSP/CarPreserveDetails.jsp</result>
+    			<result name="tolist" type="redirectAction">CarPreserveAction_list</result>
+    		</action>
+    		<!-- 汽车维修action -->
+    		<action name="CarRepairAction_*" class="carRepairAction" method="{1}">
+    			<result name="saveUI">/WEB-INF/page/TSP/CarRepairSave.jsp</result>
+    			<result name="list">/WEB-INF/page/TSP/CarRepairList.jsp</result>
+    			<result name="query">/WEB-INF/page/TSP/CarRepairList.jsp</result>
+    			<result name="detail">/WEB-INF/page/TSP/CarRepairDetails.jsp</result>
+    			<result name="tolist" type="redirectAction">CarRepairAction_list</result>
+    		</action>
+    		<!-- 路线管理的action -->
+    		<action name="LineAction_*" class="lineAction" method="{1}">
+    			<result name="saveUI">/WEB-INF/page/TSP/LineSave.jsp</result>
+    			<result name="list">/WEB-INF/page/TSP/LineList.jsp</result>
+    			<result name="query">/WEB-INF/page/TSP/LineList.jsp</result>
+    			<result name="detail">/WEB-INF/page/TSP/LineDetails.jsp</result>
+    			<result name="tolist" type="redirectAction">LineAction_list</result>
+    		</action>
     	</package> 
     	<!-- tsp 模块的action配置end -->
     </struts>

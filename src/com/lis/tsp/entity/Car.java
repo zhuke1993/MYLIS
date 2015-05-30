@@ -1,6 +1,7 @@
 package com.lis.tsp.entity;
 
 import java.sql.Date;
+import java.util.Set;
 
 public class Car {
 	/**
@@ -18,6 +19,33 @@ public class Car {
 	private String carBuyingMoney;//车买的金额
 	private Date carCreatTime;//车创建时间
 	private String carDescription;//车辆的备注
+	private Set<CarPreserve> carPreserves;//一个车辆可能有多个保修单
+	private Set<CarRepair> carRepairs;
+	
+	/**
+	 * @return the carRepairs
+	 */
+	public Set<CarRepair> getCarRepairs() {
+		return carRepairs;
+	}
+	/**
+	 * @param carRepairs the carRepairs to set
+	 */
+	public void setCarRepairs(Set<CarRepair> carRepairs) {
+		this.carRepairs = carRepairs;
+	}
+	/**
+	 * @return the carPreserves
+	 */
+	public Set<CarPreserve> getCarPreserves() {
+		return carPreserves;
+	}
+	/**
+	 * @param carPreserves the carPreserves to set
+	 */
+	public void setCarPreserves(Set<CarPreserve> carPreserves) {
+		this.carPreserves = carPreserves;
+	}
 	/**
 	 * @return the id
 	 */
