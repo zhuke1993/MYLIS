@@ -70,6 +70,14 @@
     			<result name="detail">/WEB-INF/page/TSP/LineDetails.jsp</result>
     			<result name="tolist" type="redirectAction">LineAction_list</result>
     		</action>
+    		<!-- 司机管理的action -->
+    		<action name="ChauffeurAction_*" class="chauffeurAction" method="{1}">
+    			<result name="saveUI">/WEB-INF/page/TSP/ChauffeurSave.jsp</result>
+    			<result name="list">/WEB-INF/page/TSP/ChauffeurList.jsp</result>
+    			<result name="query">/WEB-INF/page/TSP/ChauffeurList.jsp</result>
+    			<result name="detail">/WEB-INF/page/TSP/ChauffeurDetails.jsp</result>
+    			<result name="tolist" type="redirectAction">ChauffeurAction_list</result>
+    		</action>
     	</package> 
     	<!-- tsp 模块的action配置end -->
     </struts>

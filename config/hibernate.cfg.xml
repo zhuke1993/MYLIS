@@ -37,5 +37,6 @@
       	<mapping resource="com/lis/tsp/entity/CarPreserve.hbm.xml"/>
       	<mapping resource="com/lis/tsp/entity/CarRepair.hbm.xml"/>
       	<mapping resource="com/lis/tsp/entity/Line.hbm.xml"/>
+      	<mapping resource="com/lis/tsp/entity/Chauffeur.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
