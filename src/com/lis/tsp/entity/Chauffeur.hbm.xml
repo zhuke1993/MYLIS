@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-16 11:45:34 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lis.tsp.entity.Chauffeur" table="chauffeur">
+    	<id name="id" column="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="name"></property>
+    	<property name="telPhone"></property>
+    	<property name="address"></property>
+    	<property name="state"></property>
+    	<property name="Email"></property>
+    	<property name="sex"></property>
+    	<property name="brithday" type="date"></property>
+    	<!-- <set name="carPreserves">
+ 			<key column="CarId"></key>
+ 			<one-to-many class="com.lis.tsp.entity.CarPreserve"/>
+ 		</set> -->
+    </class>
+</hibernate-mapping>
